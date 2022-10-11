@@ -13,6 +13,7 @@ import State from "./7_State/State";
 import ShoppingCart from "./BT_ShoppingCart/ShoppingCart";
 import Lifecycle from "./8_Lifecycle/Lifecycle";
 import UserManagement from "./BT_UserManagement/UserManagement";
+import Composition from "./9_Composition/Composition";
 
 // Component là 1 function return về jsx, mô tả những gì sẽ hiển thị ra giao diện
 // Tên component bắt buộc viết hoa chứ cái đầu
@@ -67,7 +68,10 @@ function App() {
     // <Lifecycle />
 
     // Bài tập UserManagement
-    <UserManagement />
+    // <UserManagement />
+
+    // 9_Composition
+    <Composition/>
   );
 }
 
