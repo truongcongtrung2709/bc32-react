@@ -1,0 +1,35 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  color: white;
+  background-color: red;
+  height: 200px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.content {
+  color: white;
+  background-color: green;
+  width: 70%;
+  height: 500px;
+}
+
+.sidebar {
+  color: white;
+  background-color: blue;
+  width: 30%;
+  height: 500px;
+}
+
+.footer {
+  color: white;
+  background-color: yellow;
+  height: 200px;
+}
