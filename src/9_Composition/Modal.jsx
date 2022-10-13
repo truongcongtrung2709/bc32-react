@@ -1,5 +1,5 @@
 import React from "react";
-
+import cn from 'classnames'
 // isOpen: quyết định ẩn/hiện modal
 // onClose: hành động tắt modal
 // title: modal title
@@ -7,7 +7,7 @@ const Modal = ({ isOpen, title, footer, children, onClose }) => {
   return (
     <>
       <div
-        className={`modal fade ${isOpen ? "show d-block" : ""}`}
+        className={cn( "modal fade", {"show d-block": isOpen})}
         tabIndex={-1}
         aria-hidden="true"
       >

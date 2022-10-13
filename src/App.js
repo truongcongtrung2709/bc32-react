@@ -14,7 +14,9 @@ import ShoppingCart from "./BT_ShoppingCart/ShoppingCart";
 import Lifecycle from "./8_Lifecycle/Lifecycle";
 import UserManagement from "./BT_UserManagement/UserManagement";
 import Composition from "./9_Composition/Composition";
-
+import ReactBootstrap from "./10_ReactBootstrap/ReactBootstrap";
+import Styles from "./11_Styles/Style"
+import Hooks from "./12_Hooks/UseState"
 // Component là 1 function return về jsx, mô tả những gì sẽ hiển thị ra giao diện
 // Tên component bắt buộc viết hoa chứ cái đầu
 function App() {
@@ -71,7 +73,16 @@ function App() {
     // <UserManagement />
 
     // 9_Composition
-    <Composition/>
+    // <Composition/>
+
+    // 10_React-Bootstrap
+    // <ReactBootstrap/>
+
+    // 11_Styles
+    // <Styles/>
+
+    // 12_Hooks
+    <Hooks/>
   );
 }
 
