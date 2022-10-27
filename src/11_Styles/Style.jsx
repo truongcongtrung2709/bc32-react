@@ -2,8 +2,8 @@ import React from 'react'
 import styles from "./style.module.css";
 import headerStyles from "./header.module.scss";
 
-console.log(styles);
-console.log(headerStyles);
+// console.log(styles);
+// console.log(headerStyles);
 
 const Style = () => {
   return (

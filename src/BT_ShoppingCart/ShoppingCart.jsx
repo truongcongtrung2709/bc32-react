@@ -40,7 +40,7 @@ export default class ShoppingCart extends Component {
       // index = -1 => chưa tồn tại sản phẩm trong giỏ hàng
       // Thêm sản phẩm vào giỏ hàng và set số lượng là 1
       this.setState((state) => ({
-        carts: [...state.carts, { ...product, quantity: 1 }],
+        carts: [...state.carts, { ...product, quantity : 1 }],
       }));
     } else {
       // sản phẩm đã tồn tại trong giỏ hàng => chỉ cần tăng số lượng lên 1 đơn vị

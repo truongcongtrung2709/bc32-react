@@ -15,8 +15,14 @@ import Lifecycle from "./8_Lifecycle/Lifecycle";
 import UserManagement from "./BT_UserManagement/UserManagement";
 import Composition from "./9_Composition/Composition";
 import ReactBootstrap from "./10_ReactBootstrap/ReactBootstrap";
-import Styles from "./11_Styles/Style"
-import Hooks from "./12_Hooks/UseState"
+import Styles from "./11_Styles/Style";
+import Hooks from "./12_Hooks/UseState";
+import UseEffect from "./12_Hooks/UseEffect";
+import Shop from "./BT_ShoppingHooks/Shop";
+import UseRef from "./12_Hooks/UseRef";
+import CustomHooks from "./13_CustomHooks/CustomHooks";
+import Redux from "./14_Redux/Redux";
+import BauCua from "./BT_BauCua/BauCua";
 // Component là 1 function return về jsx, mô tả những gì sẽ hiển thị ra giao diện
 // Tên component bắt buộc viết hoa chứ cái đầu
 function App() {
@@ -82,7 +88,21 @@ function App() {
     // <Styles/>
 
     // 12_Hooks
-    <Hooks/>
+    // <Hooks/>
+    // <UseEffect/>
+    // <UseRef/>
+
+    // BT_SHoppingHooks
+    // <Shop/>
+
+    // 13_CustomHooks
+    // <CustomHooks/>
+
+    // 14_Redux
+    // <Redux/>
+
+    // Bài Tập Bầu Cua
+    <BauCua />
   );
 }
 
