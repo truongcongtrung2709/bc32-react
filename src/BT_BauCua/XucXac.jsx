@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import cn from 'classnames'
 import styles from './baucua.module.scss'
-import { playGame } from '../actions/baucuaActions';
+import { playGame } from '../slides/bauCuaSlide'
 
 
 const XucXac = () => {

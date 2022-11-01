@@ -23,6 +23,7 @@ import UseRef from "./12_Hooks/UseRef";
 import CustomHooks from "./13_CustomHooks/CustomHooks";
 import Redux from "./14_Redux/Redux";
 import BauCua from "./BT_BauCua/BauCua";
+import ReduxThunk from "./15_ReduxThunk/ReduxThunk";
 // Component là 1 function return về jsx, mô tả những gì sẽ hiển thị ra giao diện
 // Tên component bắt buộc viết hoa chứ cái đầu
 function App() {
@@ -103,6 +104,9 @@ function App() {
 
     // Bài Tập Bầu Cua
     <BauCua />
+
+    // 15_ Redux thunk
+    // <ReduxThunk />
   );
 }
 
