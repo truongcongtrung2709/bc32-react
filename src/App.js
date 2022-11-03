@@ -1,113 +1,39 @@
-import Welcome from "./1_Components/Welcome";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./1_Components/BT_Home/Home";
 import MSI from "./1_Components/BT_MSI/MSI";
-import FunctionJSX from "./2_JSX/FunctionJSX";
-import ClassJSX from "./2_JSX/ClassJSX";
-import Events from "./3_Events/Events";
-import EventsClass from "./3_Events/EventsClass";
-import Conditional from "./4_Conditional/Conditional";
-import Props from "./5_Props/Props";
-import Map from "./6_Map/Map";
-import ShoesShop from "./BT_ShoesShop/ShoesShop";
-import State from "./7_State/State";
-import ShoppingCart from "./BT_ShoppingCart/ShoppingCart";
-import Lifecycle from "./8_Lifecycle/Lifecycle";
-import UserManagement from "./BT_UserManagement/UserManagement";
-import Composition from "./9_Composition/Composition";
-import ReactBootstrap from "./10_ReactBootstrap/ReactBootstrap";
-import Styles from "./11_Styles/Style";
-import Hooks from "./12_Hooks/UseState";
-import UseEffect from "./12_Hooks/UseEffect";
-import Shop from "./BT_ShoppingHooks/Shop";
-import UseRef from "./12_Hooks/UseRef";
-import CustomHooks from "./13_CustomHooks/CustomHooks";
-import Redux from "./14_Redux/Redux";
 import BauCua from "./BT_BauCua/BauCua";
-import ReduxThunk from "./15_ReduxThunk/ReduxThunk";
-// Component là 1 function return về jsx, mô tả những gì sẽ hiển thị ra giao diện
-// Tên component bắt buộc viết hoa chứ cái đầu
-function App() {
-  // JSX: Javascript + XML - Là một cú pháp đặc biệt cho phép viết html bên trong javascript
-  // Một số quy tắc khi viết JSX:
-  // - class -> className
-  // - for -> htmlFor
-  // - các thuộc tính phải viết theo dạng camelCase. VD: tab-index -> tabIndex
+import Router from "./16_Router/Router";
+import Movie from "./16_Router/Movie";
+import Contact from "./16_Router/Contact";
+import MovieDetails from "./16_Router/MovieDetails";
+
+const router = createBrowserRouter([
+  // Nếu muốn tất cả page trong ứng dụng đều có chung 1 layout nào đó ta sẽ đưa tất cả khai báo routes vào bên trong array children
+  // { path: "/", element: <Root />, children: [] },
+  { path: "/", element: <Home /> },
+  { path: "/msi", element: <MSI /> },
+  { path: "/baucua", element: <BauCua /> },
+  {
+    path: "/router",
+    element: <Router />,
+    children: [
+      { path: "movie", element: <Movie /> },
+      // :key => dynamic params (Chấp nhận mọi giá trị trên URL)
+      { path: "movie/:movieId", element: <MovieDetails /> },
+      { path: "contact", element: <Contact /> },
+    ],
+  },
+
+  // NotFound route, cần được khai báo ở dưới cùng tất cả các route khác
+  { path: "*", element: <h1>Not Found</h1> },
+]);
+
+const App = () => {
   return (
-    // <div className="App">
-    //   <h1>Hello Reactjs</h1>
-    //   <Welcome />
-    //   <Welcome />
-    // </div>
-
-    // 1. Component
-    // <Home />
-    // <MSI />
-
-    // 2. JSX
-    // <>
-    //   <FunctionJSX />
-    //   <ClassJSX />
-    // </>
-
-    // 3. Events
-    // <>
-    //   <Events />
-    //   <EventsClass />
-    // </>
-
-    // 4. Conditional
-    // <Conditional />
-
-    // 5. Props
-    // <Props />
-
-    // 6. Map
-    // <Map />
-
-    // Bài tập ShoeShop
-    // <ShoesShop />
-
-    // 7. State
-    // <State message="Hello BC32" />
-
-    // Bài tập ShoppingCart
-    // <ShoppingCart />
-
-    // 8. Lifecycle
-    // <Lifecycle />
-
-    // Bài tập UserManagement
-    // <UserManagement />
-
-    // 9_Composition
-    // <Composition/>
-
-    // 10_React-Bootstrap
-    // <ReactBootstrap/>
-
-    // 11_Styles
-    // <Styles/>
-
-    // 12_Hooks
-    // <Hooks/>
-    // <UseEffect/>
-    // <UseRef/>
-
-    // BT_SHoppingHooks
-    // <Shop/>
-
-    // 13_CustomHooks
-    // <CustomHooks/>
-
-    // 14_Redux
-    // <Redux/>
-
-    // Bài Tập Bầu Cua
-    <BauCua />
-
-    // 15_ Redux thunk
-    // <ReduxThunk />
+    <>
+      <RouterProvider router={router}></RouterProvider>
+    </>
   );
-}
+};
 
 export default App;

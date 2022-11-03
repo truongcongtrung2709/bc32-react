@@ -28,8 +28,9 @@ export const getMovies = () => {
       dispatch({
         type: "get_movies/rejected",
         payload: {
-          //error: response.data là format của axios
-          error: error.response.data,
+          // error.response.data là format của axios
+          error:
+            error.response.data || "Something went wrong, please try later!!!",
         },
       });
     }

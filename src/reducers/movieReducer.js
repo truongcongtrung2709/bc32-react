@@ -11,12 +11,14 @@ const movieReducer = (state = initialState, action) => {
         ...state,
         loading: true,
       };
+
     case "get_movies/fulfilled":
       return {
         ...state,
         movies: action.payload.data,
         loading: false,
       };
+
     case "get_movies/rejected":
       return {
         ...state,
@@ -27,4 +29,5 @@ const movieReducer = (state = initialState, action) => {
       return state;
   }
 };
+
 export default movieReducer;

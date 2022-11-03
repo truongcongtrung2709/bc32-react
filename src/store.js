@@ -5,15 +5,15 @@ import { configureStore } from "@reduxjs/toolkit";
 import countReducer from "./reducers/countReducer";
 import messageReducer from "./reducers/messageReducer";
 // import baucuaReducer from "./reducers/baucuaReducer";
+// import movieReducer from "./reducers/movieReducer";
 
-import movieReducer from "./reducers/movieReducer";
-
-//slides
+// slices
 import baucuaReducer from "./slides/bauCuaSlide";
+import movieReducer from "./slides/movieSlice";
 
-//configureStore
-// - tự động setup redux devtool, ta có thể overide thông qua key devools,
-// - tự động setup middleware là redux-thunk
+// configureStore
+// - Tự động setup redux devtool, ta có thể override thông qua key devtools
+// - Tự động setup middleware là redux-thunk
 const store = configureStore({
   reducer: {
     count: countReducer,

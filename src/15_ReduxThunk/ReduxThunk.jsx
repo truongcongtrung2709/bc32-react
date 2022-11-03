@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import { getMovies } from "../actions/movieActions";
+import { getMovies } from "../slides/movieSlice";
 
 const ReduxThunk = () => {
   const { movies, loading, error } = useSelector((state) => state.movie);
